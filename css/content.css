@@ -1,0 +1,182 @@
+.content {
+    flex: 1;
+    display: flex;
+    overflow: auto;
+}
+.side__bar{
+    width: 240px;
+    padding: 10px 30px;
+}
+
+@media (max-width:500px) {
+    .side__bar {
+        /* position: fixed;
+        left: -100vw; */
+        display: none;
+    }
+}
+
+.side__bar .row {
+    margin: 5px 0px;
+    display: flex;
+    align-items: center ;
+    font-weight: 500;
+    font-size: .9rem;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.side__bar .row img {
+    height: 21px;
+}
+.subs {
+    height: 25px;
+}
+
+.side__bar .txt {
+    margin-left: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.active {
+    background-color: rgb(233, 231, 231);
+}
+
+.side__bar .title {
+    margin: 10px 15px;
+    font-weight: normal;
+    font-size: 1.1rem;
+}
+
+.dot {
+    position: relative;
+}
+
+/* some special attention caused by photo aspect ratio problem */
+.shorts .txt{
+    margin-left: 25px;
+}
+.aman .txt{
+    margin-left: 16px;
+}
+
+.dot::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    transform: translate(0,-50%);
+    background-color: blue;
+    z-index: 2;
+}
+
+.dot::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    height: 4px;
+    width: 4px;
+    padding: 12px;
+    border-radius: 50%;
+    transform: translate(0,-50%);
+    background-color: white;
+}
+
+.videos__section {
+    flex: 2;
+    overflow-x: hidden;
+}
+
+.categories__options{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    overflow-x: hidden;
+    white-space: nowrap;
+    margin: 5px 0;
+}
+
+.cat__option{
+    background-color: rgb(226, 226, 226);
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.categories__options .active {
+    background-color: grey;
+    color: white;
+}
+
+.videos{
+    margin: 20px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-right: 25px;
+}
+
+@media (max-width:800px) {
+    .videos {
+        margin-right: 2px;
+    }
+}
+
+.card-1{
+    max-width: 300px;
+    min-width: 215px;
+    flex: 1;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.card-1 > img {
+    width: 100%;
+}
+
+
+.info{
+    display: flex;
+}
+
+.channer-dp {
+    height: 35px;
+    margin-right: 5px;
+}
+
+.info .title {
+    width: 90%;
+    font-size: .9rem;
+    /* font-weight: 600; */
+}
+
+
+.channel-name{
+    font-size: .8rem;
+    /* margin: 10px 0; */
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    font-size: .8rem;
+    color: grey;
+}
+
+.varify {
+    margin-left: 5px;
+    background-color: grey;
+    border-radius: 50%;
+    color: white;
+    font-size: .8rem !important;
+}
+
+.card-1 .time {
+    font-size: .8rem;
+    color: grey;
+}
